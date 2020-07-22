@@ -62,6 +62,12 @@ SELECT * FROM Persons WHERE firstname='Thomas' OR lastname='Carter'
 SELECT * FROM Persons WHERE (FirstName='Thomas' OR FirstName='William')
 AND LastName='Carter'
 
+## AS 重命名
+
+语法 SELECT 查询的数据 AS  重命名别的
+
+SELECT M_NAME  AS  name
+
 ## ORDER BY 语句排序。
 
  order by 字段名 asc/desc  
