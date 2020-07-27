@@ -34,7 +34,7 @@ SELECT LastName,FirstName FROM Persons
 WHERE条件查询
 SELECT 列名称 FROM 表名称 WHERE 列 运算符 值
 SELECT * FROM Persons WHERE City='Beijing'
-数值 不需要引号
+数值 不需要引号 
 
 ```
 =	等于
@@ -84,13 +84,15 @@ INSERT INTO 表名称 VALUES (值1, 值2,....)
 INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)
 在指定的列中插入数据，lastName和address是插入的字段 values是值
 INSERT INTO Persons (LastName, Address) VALUES ('Wilson', 'Champs-Elysees')
+多表插入
+INSERT INTO 表名称 VALUES (值1, 值2,....);INSERT INTO 表名称 VALUES (值1, 值2,....)
 
 ### 插入乱码
 
-SELECT @字段 : = ${db.NewID()} AS ID
-INSERT INTO 表名 {字段1} values {值1}
-SELECT @M0004_ID := ${db.NewID()} AS ID;
-INSERT INTO 表名 {M0004_ID，name} values {@M0004_ID,'$input.name'}
+SELECT @字段 := ${db.NewID()} AS ID,
+INSERT INTO 表名 (字段1} values (值1)
+SELECT @M0004_ID:= ${db.NewID()) AS ID,
+INSERT INTO 表名 (M0004_ID，name) values (@M0004_ID,'$input.name')
 
 ## UPDATE 语句 （修改信息,如果不设置WHERE条件，那么就更新所有的表 ）
 
