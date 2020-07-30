@@ -80,12 +80,26 @@ SELECT Company, OrderNumber FROM Orders ORDER BY Company DESC, OrderNumber ASC
 
 ## INSERT INTO 表格插入新的行。
 
-INSERT INTO 表名称 VALUES (值1, 值2,....)
+INSERT INTO 表名称(列1, 列2,...) VALUES (值1, 值2,....)
 INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)
 在指定的列中插入数据，lastName和address是插入的字段 values是值
 INSERT INTO Persons (LastName, Address) VALUES ('Wilson', 'Champs-Elysees')
 多表插入
 INSERT INTO 表名称 VALUES (值1, 值2,....);INSERT INTO 表名称 VALUES (值1, 值2,....)
+
+### 有则更新，无则插入
+
+INSERT INTO 表名(列1, 列2,...) 
+VALUES (值1, 值2,....)
+ON DUPLICATE KEY UPDATE 
+列1= 'UpId',
+列2= 'upPassword'，
+
+INSERT INTO user_admin_t (_id,password) 
+VALUES ('1','第一次插入的密码') 
+ON DUPLICATE KEY UPDATE 
+_id = 'UpId',
+password = 'upPassword';
 
 ### 插入乱码
 
