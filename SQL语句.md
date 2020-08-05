@@ -154,3 +154,12 @@ WHERE name REGEXP '^[^A-H]';  查询以name不以A-H开头的字段
 SELECT * FROM Websites
 WHERE name IN ('Google','菜鸟教程');  选取 name 为 "Google" 或 "菜鸟教程" 的字段
 
+## RIGHT JOIN、left join 第一个表id查第二个表id的数据
+
+select * from A
+left join B 
+on A.aID = B.bID
+
+select * from A
+right join B 
+on A.aID = B.bID
