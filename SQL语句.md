@@ -154,12 +154,35 @@ WHERE name REGEXP '^[^A-H]';  查询以name不以A-H开头的字段
 SELECT * FROM Websites
 WHERE name IN ('Google','菜鸟教程');  选取 name 为 "Google" 或 "菜鸟教程" 的字段
 
-## RIGHT JOIN、left join 第一个表id查第二个表id的数据
+## inner join on, left join on, right join on链接表
 
-select * from A
+```
+INNER JOIN 连接两个数据表的用法：
+
+SELECT * FROM 表1 INNER JOIN 表2 ON 表1.字段号=表2.字段号
+
+INNER JOIN 连接三个数据表的用法：
+SELECT * FROM (表1 INNER JOIN 表2 ON 表1.字段号=表2.字段号) INNER JOIN 表3 ON 表1.字段号=表3.字段号
+
+INNER JOIN 连接四个数据表的用法：
+SELECT * FROM ((表1 INNER JOIN 表2 ON 表1.字段号=表2.字段号) INNER JOIN 表3 ON 表1.字段号=表3.字段号) INNER JOIN 表4 ON Member.字段号=表4.字段号
+
+select * from A #结果偏向左边
 left join B 
 on A.aID = B.bID
+WHERE 
+A.ID ='$input.ID'
 
-select * from A
+select * from A #结果偏向左边
 right join B 
 on A.aID = B.bID
+WHERE 
+A.ID ='$input.ID'
+
+
+```
+
+
+
+
+
