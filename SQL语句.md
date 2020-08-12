@@ -103,7 +103,7 @@ password = 'upPassword';
 
 ### 插入乱码
 
-SELECT @字段 := ${db.NewID()} AS ID,
+SELECT @字段 := ${db.NewID()} AS ID;
 INSERT INTO 表名 (字段1} values (值1)
 SELECT @M0004_ID:= ${db.NewID()) AS ID,
 INSERT INTO 表名 (M0004_ID，name) values (@M0004_ID,'$input.name')
