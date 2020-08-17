@@ -39,5 +39,35 @@
 > 针对不同操作系统，下载不同版本的JDK，安装路径写英文
 >
 > <https://www.oracle.com/cn/downloads/> 下载网站
+
+## Hollew Worled
+
+> 1. 新建一个java为后缀名的文件
 >
-> 
+>    ```
+>    class 名称 {
+>      public static void main(String[] args){
+>        System.out.println("content");
+>      }
+>    }
+>    ```
+>
+> 2. 使用dos系统输入 javac +空格 + 文件名为java后缀的文件  生成class后缀文件
+>
+> 3. 如果没报错，使用   java 文件名     <!-- 文件名不需要跟后缀名 -->
+
+## JAVA环境变量配置
+
+1. 创建新的变量名称   JAVA_HOME  值为JDK安装目录(有bin文件夹的目录)    D:\install\java
+
+2. 在path中新建编辑 %JAVA_HOME%\bin     %java_home%是选中变量的意思
+
+3. classpath环境变量
+
+   1. 名为 classpath。值为classpath文件的目录，多个目录间用分号(;)分割。class文件
+   2. 作用：使classpath目录中的，class文件可以在任意目录运行
+   3. 技巧：通常将配置的目录最前面添加，配置，即便当前目录，使class文件
+
+   > path是以exe为结尾的环境配置，
+   >
+   > classpath环境变量里记录的是java类的运行文件所在目录
