@@ -19,3 +19,32 @@
     },
 ```
 
+# 递归渲染数控
+
+```
+ // 树控渲染
+	this.totree(res,0)
+    toTree(data, PID) {
+      let result = [];
+      if (!Array.isArray(data)) {
+        return result;
+      }
+      data.forEach((ele, index) => {
+        if (ele.M0004_PID == PID) {
+          if (
+            data.findIndex(
+              element =>
+                element.M0004_PID == ele.M0004_ID 
+            ) != -1
+          ) {
+            ele.children = this.toTree(data, ele.M0004_ID);
+          }
+          result.push(ele);
+        }
+      });
+      return result;
+    },
+```
+
+
+

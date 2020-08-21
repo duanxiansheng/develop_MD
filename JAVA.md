@@ -10,13 +10,17 @@
 
 ## DOS系统简单的命令
 
-> ipconfig查询ip 、 cls 清屏、 exit退出、 
+> ipconfig查询ip 、 cls 清屏、 exit退出、 c:/d: 切换盘服
 
 ## Java跨平台
 
 > #### 什么是跨平台性？
 >
 > ​	通过java语言编写的应用程序在不同的系统平台上都可以运行
+>
+> **java是跨平台的，jvm不是跨平台的**
+>
+> ​	jvm有不同版本的，比如安卓苹果windows、linux等，JVM(相当于一个桥梁)对Java语言进行编译和运行
 >
 > #### 原理是什么？
 >
@@ -26,9 +30,11 @@
 
 ## JRK与JDK
 
+> **JVM保证java语言跨平台**
+>
 > ###### JRE（java Runtime Environment  JAVA运行环境）
 >
-> 包括java虚拟机和java程序所需的核心类库等，如果想运行一个开发好的java程序，计算机中只需要安装JRE即可
+> 包括java虚拟机jvm和java程序所需的核心类库等，如果想运行一个开发好的java程序，计算机中只需要安装JRE即可
 >
 > ##### JDK(java Development Kit  java 开发工具包)
 >
@@ -50,6 +56,13 @@
 >        System.out.println("content");
 >      }
 >    }
+>    java程序的最基本单位是类，所以我们要定义一个类。
+>    	格式 class 类名 举例 class helloworld
+>    在类中写内容，要用大括号括起来
+>    java程序要想执行，必须有main方法
+>    	格式：public static void main(string[] args)
+>    严格区分大小写
+>    	
 >    ```
 >
 > 2. 使用dos系统输入 javac +空格 + 文件名为java后缀的文件  生成class后缀文件
