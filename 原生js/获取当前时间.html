@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body></body>
+    <script>
+         // 获取当前时间
+        function getTime() {
+          var myDate = new Date();
+          var Y = myDate.getFullYear();
+          var M = myDate.getMonth() + 1;
+          M = M < 10 ? "0" + M : M;
+          var D = myDate.getDate();
+          D = D < 10 ? "0" + D : D;
+          var h = myDate.getHours();
+          h = h < 10 ? "0" + h : h;
+          var m = myDate.getMinutes();
+          m = m < 10 ? "0" + m : m;
+          var s = myDate.getSeconds();
+          s = s < 10 ? "0" + s : s;
+          var time = Y + "-" + M + "-" + D + " " + h + ":" + m + ":" + s;
+          return time;
+        },
+    </script>
+</html>
