@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 思路 ： 最外层给个小值，里层给个大值加上 overflow: auto;*/
+        .dv {
+            background-color: #2e2e2e;
+            width: 100px;
+            height: 50px;
+            overflow: auto;
+        }
+        .dv::-webkit-scrollbar {
+            display: none;
+        }
+        .box {
+            width: 250px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dv">
+        <div class="box">
+            <button>按钮1</button>
+            <button>按钮2</button>
+            <button>按钮3</button>
+            <button>按钮4</button>
+        </div>
+    </div>
+</body>
+
+</html>
