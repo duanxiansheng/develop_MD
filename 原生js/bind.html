@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body></body>
+    <script>
+        this.num = 9;
+        var mymodule = {
+            num: 81,
+            getNum: function () {
+                console.log(this.num);
+            },
+        };
+
+        mymodule.getNum(); // 81 作用域由内向外
+
+        var getNum = mymodule.getNum;
+        getNum(); // 9, 因为在这个例子中，"this"指向全局对象
+
+        var boundGetNum = getNum.bind(mymodule);
+        boundGetNum(); // 81 通过bind使getNum指向了mymodule
+    </script>
+</html>

@@ -972,7 +972,7 @@ for(let i in obj){
 12. `arr.toString()` 将数组转换为字符串,不会改变原数组
 13. `arr.toLocalString()` 将数组转换为本地字符串，使用地区特定的分隔符把生成的字符串连接起来，形成一个字符串
 14. `arr.filter(function(ele,index){return ele>3;})` 一个集合到一个更小的集合
-15. `arr.map((ele)=>{return ele*2;})` 映射，一一对应，一个集合到另一个集合
+15. `arr.map((ele)=>{return ele*2;})` 映射，会产生一个新数组，不改变原来数组的值。必须有返回值，如果没有return，那么新数组的每一项都为undefined
 16. `arr.forEach(function(ele,index){})` 数组遍历
 17. `arr.slice(start,end)` 截取 从开始的下标到结束的下标，但不包含结束的下标，结束下标-1。如果结束没有值，截取剩余所有的元素。
 18. `arr.splice(start,length)` 删除 从开始的下标删除指定的长度，改变原数组，当length为0时，做添加功能，当length不为0时，先删除指定的长度个元素，在添加
