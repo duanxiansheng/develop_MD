@@ -183,6 +183,22 @@ class 组件名 extends React.Component {
  ReactDOM.render(<组件名 data={'123'} />, root);
 ```
 
+## 路由
+
+根据不同路径，显示不同的组件（内容）；使用的库react-router-dom
+
+```
+安装 npm install react-router-dom --save
+```
+
+reactRouter三大组件：
+
+Router：所有路由组件的根组件，包裹路由规则的最外层容器。属性：basename->设置根此路由根路径，router可以在1个组件中写多个
+
+Route：路由规则匹配件，显示当前规则对应的组件
+
+Link：路由跳转组件
+
 ## 储存数据(vue的data)
 
 定义在类组件中。<u>每次reactDOM.render的时候，constructor只执行一次，render渲染每次都执行。</u>
@@ -244,6 +260,9 @@ class 组件名 extends React.Component {
 
 componentWillMount(){
     console.log("组件将要渲染")
+
+// 渲染数据的时候。或者调用ajax的时候
+
   }
   componentDidMount(){
 
@@ -338,6 +357,8 @@ render() {
     }
     
 拓展。可以用map代替for循环
+
+可能会出错，要设置key。key值需要放到每一项中
 ```
 
 
@@ -346,13 +367,11 @@ render() {
 
 驼峰命名
 
-
-
-原生：阻止跳转return false
-
 点击事件onClick={this.clickevent}
 
+键盘按下事件onKeyDown={this.onkey}
 
+监听输入框 onChange = {this.change}
 
 ## 组件传值
 
@@ -469,9 +488,43 @@ ReactDOM.render(<Demo1 />, document.getElementById("root"));
 
 
 
+# 插槽
+
+需要自己开发插槽。
+
+原理：组件中写入
+
+```
+在render中写入。然后通过在类组件中，写入this.props.children，如同传值.
+传值test，传入的值也是在props中找
+class Demo extends React.Component {
+    render() {
+        return (
+            <div>
+                <h1>插槽</h1>
+                {this.props.children}
+            </div>
+        );
+    }
+}
+
+ReactDOM.render(
+    <Demo>
+        <h1 test="1">组件1</h1>
+        <h1>组件2</h1>
+        <h1>组件3</h1>
+    </Demo>,
+    document.getElementById("root")
+);
+```
+
+
+
 # 补充
 
 babel：一般babel.js是ES6转ES5的。
+
+移动端框架使用ANT-ui    蚂蚁框架
 
 # 问题
 
