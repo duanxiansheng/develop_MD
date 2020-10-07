@@ -1009,6 +1009,7 @@ for(let i in obj){
 ### 方法：
 
 - 当前时间 date.toLocaleTimeString（）// 上午12：12：12
+- 当前时间 toLocaleString
 - 年 `date.getFullYear()`
 - 月 0-11 `date.getMonth()`
 - 日 1-31 `date.getDate()`

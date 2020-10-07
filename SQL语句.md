@@ -96,7 +96,11 @@ order by 无法用于子查询，否则会报错
 
 除非另外还指定了 TOP 或 FOR XML，否则，ORDER BY 子句在视图、内联函数、派生表、子查询和公用表表达式中无效。
 
-SELECT Company, OrderNumber FROM Orders ORDER BY Company DESC, OrderNumber ASC
+SELECT Company, OrderNumber FROM Orders 
+
+ORDER BY 排序的字段 DESC
+
+, OrderNumber ASC
 
 # INSERT INTO 表格插入新的行。
 
@@ -134,7 +138,7 @@ _id = 'UpId',
 
 password = 'upPassword';
 
-# 插入乱码
+# 插入乱码id
 
 SELECT @字段 := ${db.NewID()} AS ID;
 
@@ -143,6 +147,17 @@ INSERT INTO 表名 (字段1} values (值1)
 SELECT @M0004_ID:= ${db.NewID()) AS ID,
 
 INSERT INTO 表名 (M0004_ID，name) values (@M0004_ID,'$[input.name](http://input.name/)')
+
+# 插入当前时间
+
+now() 方法
+
+## 获取条数
+
+```
+ 获取7条
+ limit 7     
+```
 
 # UPDATE 语句 （修改信息,如果不设置WHERE条件，那么就更新所有的表 ）
 
