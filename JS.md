@@ -11,7 +11,21 @@
 
 # Javascript
 
-> 客户端脚本语言，用于用户交互
+> 客户端脚本语言，用于用户交互FormData
+>
+> FormData异步上传文件,多用于ajax原生穿件form表单
+>
+> ```csharp
+> //通过FormData构造函数创建一个空对象
+> var formdata=new FormData();
+> //可以通过append()方法来追加数据
+> formdata.append("name","laotie");
+> //通过get方法对值进行读取
+> console.log(formdata.get("name"));//laotie
+> //通过set方法对值进行设置
+> formdata.set("name","laoliu");
+> console.log(formdata.get("name"));//laoliu
+> ```
 
 ### 特点：
 
@@ -1319,8 +1333,8 @@ obj.ondbclick=function(){
 - on+type:如果给同一事件源添加相同的事件，后者的事件处理函数覆盖前者的。
 
   - 鼠标：click、mouseenter、mouseleave、dblclick
-  - 键盘：keydown、keyup
-  - 表单:focus、blur(失去焦点)、change(改变并且失去焦点)、input(表单的值实时改变)
+  - 键盘：keydown、keyup(鼠标弹起)
+  - 表单:focus、onblur(失去焦点)、change(改变并且失去焦点)、input(表单的值实时改变)
   - window:load(页面加载)、scroll(页面的滚动)
 
 - 事件监听 ：同一个事件源的同一个事件可以添加多个事件处理函数
