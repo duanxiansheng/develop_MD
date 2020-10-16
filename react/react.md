@@ -1,45 +1,4 @@
-# markdown使用说明
 
-大纲显示隐藏 ctrl + shift + 1
-
-## 标题
-
-ctrl 加 1~6   #6最小
-
-## 斜体 粗体 下划线
-
-斜体：ctrl+i 
-
-粗体:   ctrl + b 
-
-下划线： ctrl + u 
-
-## 列表
-
-```
- 无序列表: + 加空格
- 有序列表: 1.加空格
-```
-
-## 注释
-
-大于号 加空格
-
-> 注释
-
-## 代码
-
-```
-三个```回车生产
-```
-
-## 表格
-
-表格：ctrl + t
-
-## 水平线
-
-水平分割线：三个*号
 
 # React
 
@@ -525,6 +484,11 @@ ReactDOM.render(
 babel：一般babel.js是ES6转ES5的。
 
 移动端框架使用ANT-ui    蚂蚁框架
+
++  static defaultProps 属性，设置props里的值
+  +  static defaultProps ={a:1}
+
+
 
 # 问题
 
