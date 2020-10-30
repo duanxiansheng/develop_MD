@@ -168,11 +168,11 @@
 
 - - 查看日志 git log
 
-  - -  查看历史提交的日志，复制commit后面的ID
+  - -  查看历史提交的日志，复制commit后面的ID 输入q退出 
 
   - 回退到指定的版本
 
-  - - git reset --hard Head commit的ID
+  - - git reset --hard commit的ID
 
 ------
 
