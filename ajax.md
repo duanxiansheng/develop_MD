@@ -103,7 +103,7 @@ artTemplate插件的使用
 	 if(xhr.status==200 && xhr.readyState == 4) {
 	 
 	 }
-	}}
+	}
 ```
 
 
