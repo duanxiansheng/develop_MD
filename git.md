@@ -34,7 +34,7 @@
 
     - 在标题/title里起名
 
-    - 在键/key里粘贴id_rsa.pub文件的内容
+    - 在键/key里粘贴id_rsa.pub文件的内容，id_rsa.pub在c盘用户里
 
     - 测试ssh key是否成功
 
